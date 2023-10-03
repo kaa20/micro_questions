@@ -1,0 +1,1 @@
+{"question": "Чем отличаются ReplicationController от ReplicaSet?", "answer": "ReplicaSet поддерживает множественный выбор в селекторе"}

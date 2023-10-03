@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Exercise {
+public class Question {
 
     @Id
     @GeneratedValue

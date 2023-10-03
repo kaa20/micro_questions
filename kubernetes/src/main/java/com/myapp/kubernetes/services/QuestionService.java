@@ -1,11 +1,11 @@
 package com.myapp.kubernetes.services;
 
-import com.myapp.kubernetes.model.Exercise;
+import com.myapp.kubernetes.model.Question;
 
 import java.util.List;
 
-public interface KubernetesExerciseService {
-    List<Exercise> getRandom(int amount);
+public interface QuestionService {
+    List<Question> getRandom(int amount);
     void setVersion(int version);
     int getVersion();
     void fillDB();
