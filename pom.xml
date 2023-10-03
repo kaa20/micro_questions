@@ -3,13 +3,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example.exams</groupId>
-    <artifactId>questions-parent</artifactId>
+    <groupId>com.myapp</groupId>
+    <artifactId>micro_questions</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>questions-exams</name>
+    <name>micro_questions</name>
     <description>Demo project for Spring Boot</description>
+
+    <modules>
+        <module>kubernetes</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
