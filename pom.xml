@@ -13,6 +13,7 @@
 
     <modules>
         <module>kubernetes</module>
+        <module>java_quiz</module>
     </modules>
 
     <parent>
