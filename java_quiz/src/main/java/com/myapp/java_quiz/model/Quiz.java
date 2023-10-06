@@ -6,8 +6,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Entity
 @Data
 @AllArgsConstructor
@@ -19,8 +17,10 @@ public class Quiz {
     @GeneratedValue
     private Integer id;
     private String question;
-
-    @OneToMany(mappedBy = "quizes")
-    private List<Answer> answers;
+    private String answerA;
+    private String answerB;
+    private String answerC;
+    private String answerD;
+    private String rightAnswer;
 
 }

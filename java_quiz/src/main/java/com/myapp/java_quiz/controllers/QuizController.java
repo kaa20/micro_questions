@@ -17,9 +17,9 @@ public class QuizController {
 
     private final QuizService service;
 
-    @GetMapping("/quizes")
+    @GetMapping("/quizzes")
     public List<Quiz> getQuiz(@RequestParam(value = "amount", defaultValue = "1") Integer amount) {
-        return service.getRandom(amount);
+        return service.getRandomQuizzes(amount);
     }
 
 }
