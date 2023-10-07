@@ -20,10 +20,6 @@ public class QuestionServiceImpl implements QuestionService {
     @Setter
     private QuestionDao dao;
 
-    @Setter
-    @Getter
-    private int version;
-
     @Override
     public List<Question> getRandom(int amount) {
         List<Question> all = dao.findAll();
@@ -32,12 +28,7 @@ public class QuestionServiceImpl implements QuestionService {
     }
 
     @Override
-    public void fillDB() {
-        System.out.println("filling db with some data");
-        List<Question> exercises = Arrays.asList(
-                Question.builder().question("Чем отличаются ReplicationController от ReplicaSet?").answer("ReplicaSet поддерживает множественный выбор в селекторе").build(),
-                Question.builder().question("Что находится на master ноде?").answer("kube-apiserver, etcd, kube-scheduler, kube-controller-manager").build()
-                );
-        dao.saveAll(exercises);
+    public void addQuestion(Question question) {
+        dao.save(question);
     }
 }
