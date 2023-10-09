@@ -15,6 +15,7 @@
         <module>kubernetes</module>
         <module>java_quiz</module>
         <module>discovery-service</module>
+        <module>examinator</module>
     </modules>
 
     <parent>
