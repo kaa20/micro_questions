@@ -19,7 +19,7 @@ public class QuizInitUtils {
                 .answerB("Society of Leaders in Development")
                 .answerC("Salt Spring Organization for Life Improvement and Development")
                 .answerD("Single responsibility, Open–closed, Liskov substitution, Interface segregation и Dependency inversion")
-                .rightAnswer("Single responsibility, Open–closed, Liskov substitution, Interface segregation и Dependency inversion")
+                .answer("Single responsibility, Open–closed, Liskov substitution, Interface segregation и Dependency inversion")
                 .build();
 
         Quiz quiz2 = Quiz.builder().question("Что такое Dependency Injection?")
@@ -27,7 +27,7 @@ public class QuizInitUtils {
                 .answerB("Набор паттернов и принципов разработки программного обеспечения, которые позволяют писать слабо связанный код")
                 .answerC("Принцип согласно которому модули высокого уровня не должны зависеть от модулей низкого уровня")
                 .answerD("Шаблон, в котором управление потоком приложения передается внешнему фреймворку или контейнеру")
-                .rightAnswer("Набор паттернов и принципов разработки программного обеспечения, которые позволяют писать слабо связанный код")
+                .answer("Набор паттернов и принципов разработки программного обеспечения, которые позволяют писать слабо связанный код")
                 .build();
 
         quizService.addQuiz(quiz1);

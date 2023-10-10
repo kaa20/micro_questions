@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
-public class KubernetesQuestionsController {
+public class QuestionsController {
     private final QuestionService service;
 
     @GetMapping("/questions")

@@ -21,6 +21,6 @@ public class Quiz {
     private String answerB;
     private String answerC;
     private String answerD;
-    private String rightAnswer;
+    private String answer;
 
 }
