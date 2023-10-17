@@ -1,0 +1,61 @@
+services:
+  discovery-service:
+    image: application/discovery-service:latest
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+    environment:
+      SERVER_PORT: 8080
+    ports:
+      - 8761:8080
+
+  examinator:
+    image: application/examinator:latest
+    depends_on:
+      service-discovery:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+    environment:
+      SERVER_PORT: 8080
+      DISCOVERY_URL: http://service-discovery:8080/eureka/
+    ports:
+      - 8083:8080
+
+  java_quiz:
+    image: application/java_quiz:latest
+    depends_on:
+      service-discovery:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+    environment:
+      SERVER_PORT: 8080
+      DISCOVERY_URL: http://service-discovery:8080/eureka/
+    ports:
+      - 8084:8080
+
+
+  kubernetes:
+    image: application/kubernetes:latest
+    depends_on:
+      service-discovery:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+    environment:
+      SERVER_PORT: 8080
+      DISCOVERY_URL: http://service-discovery:8080/eureka/
+    ports:
+      - 8085:8080
